@@ -5,6 +5,10 @@ pipeline {
         }
     }
 
+    triggers {
+        pollSCM '*/5 * * * *'
+    }
+
     stages {
         stage('Building') {
             steps {
